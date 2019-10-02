@@ -22,6 +22,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.StorageReference;
 
 import java.awt.font.TextAttribute;
+import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -74,7 +75,7 @@ public class JournalListActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.action_add:
-                //Take users to add Journal
+
                 if (user != null && firebaseAuth != null) {
                     startActivity(new Intent(JournalListActivity.this,
                             PostJournalActivity.class));
@@ -91,6 +92,11 @@ public class JournalListActivity extends AppCompatActivity {
                     //finish();
                 }
                 break;
+
+            case R.id.Uploadnotes:
+                startActivity(new Intent(JournalListActivity.this, NotesUploadActivity.class));
+                break;
+
         }
         return super.onOptionsItemSelected(item);
     }
@@ -118,7 +124,7 @@ public class JournalListActivity extends AppCompatActivity {
                                 journalList.add(journal);
                             }
 
-                            //Invoke recyclerview
+
                             journalRecyclerAdapter = new JournalRecyclerAdapter(JournalListActivity.this,
                                     journalList);
                             recyclerView.setAdapter(journalRecyclerAdapter);

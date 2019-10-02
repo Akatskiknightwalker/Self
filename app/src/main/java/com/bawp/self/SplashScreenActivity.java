@@ -20,10 +20,10 @@ public class SplashScreenActivity extends AppCompatActivity {
                 .withSplashTimeOut(2000)
                 .withBackgroundColor(Color.parseColor("#1a1b29"))
                 .withHeaderText("")
-                .withFooterText("Self. Gratitude. Journal")
+                .withFooterText("")
                 .withBeforeLogoText("")
-                .withAfterLogoText("")
-                .withLogo(R.mipmap.ic_launcher_round);
+                .withAfterLogoText("Self. Gratitude. Journal")
+                .withLogo(R.drawable.splashscreenimage);
 
 
         config.getHeaderTextView().setTextColor(Color.WHITE);

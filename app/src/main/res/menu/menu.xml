@@ -10,5 +10,8 @@
     <item android:id="@+id/action_signout"
         android:title="@string/signout"
         app:showAsAction="never"/>
+    <item android:id="@+id/Uploadnotes"
+        android:title="Upload PDF"
+        app:showAsAction="never"/>
 
 </menu>
